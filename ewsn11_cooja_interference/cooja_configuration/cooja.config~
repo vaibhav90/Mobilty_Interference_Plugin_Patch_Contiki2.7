@@ -1,0 +1,5 @@
+org.contikios.cooja.GUI.JARFILES = + interference.jar
+org.contikios.cooja.plugins.Visualizer.SKINS = + InterferenceSkin
+
+TraceFileInterferer.TRACEFILE = mytrace.txt
+

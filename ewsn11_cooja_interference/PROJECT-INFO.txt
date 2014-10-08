@@ -1,0 +1,53 @@
+============================
+ewsn2011_cooja_interference
+============================
+
+Name: EWSN 2011 demo "Realistic Simulation of Radio Interference in COOJA"
+
+Contact: Fredrik Österlind <fros@sics.se>
+
+
+License: BSD http://www.opensource.org/licenses/bsd-license.php
+
+
+Contiki version: 2.4
+
+
+Intended platforms: Tmote Sky (and others with CC2420).
+
+Tested platforms: Tmote Sky
+
+
+Reference: Carlo Alberto Boano, Kay Römer, Fredrik Österlind, and Thiemo Voigt. Realistic Simulation of Radio Interference in COOJA. In Proceedings of the 8th European Conference on Wireless Sensor Networks (EWSN), demo session. Bonn, Germany. February 2011. 
+
+===============
+How to run it:
+===============
+1. Enter the frossi-scanner folder and modify build.xml accordingly
+2. Compile the frossi-scanner (ant jar)
+3. Enter the cooja_configuration folder and modify build.xml accordingly
+4. Compile the cooja_configuration (ant jar)
+5. Start up COOJA at contiki-2.x/tools/cooja with ant clean && ant jar & ant
+6. Configure COOJA to load both the frossi-scanner and the cooja_configuration projects
+(Menu -> Settings -> COOJA Projects -> select both projects and make sure the frossi-scanner is loaded before cooja_configuration -> Save as default -> Restart COOJA)
+7. Open and reconfigure the *.csc files 
+(Menu -> File -> Open simulation -> Open and Reconfigure -> Browse)
+Make sure that all Application mote types point to the correct .class files
+
+=======
+Usage:
+=======
+1. You should see a visualizer with the brand new "Interference skin" activated.
+The skin's purpose is twofold: it provides icons separating regular Contiki motes from interferers, and it provides right-mouse-click menu for activating/deactivating the interferers. The current version does not remember activity state: the interferers will always be deactivated when the simulation is loaded.
+
+2. Start the simulation. The frossi-scanner should immediately start showing (simulated) RSSI traces. Try moving nodes closer/further away from the frossi-scanner node (ear-like clipart).
+
+3. To record an interference trace use the recording_interference application and place the generated trace in the cooja_configuration\traces accordingly.
+
+4. For the ewsn_collect.csc use contiki-2.x\examples\sky-shell\sky-shell.c
+
+5. Make sure that contiki/tools/cooja/apps/collect-view is in Settings->Cooja projects before the other two
+
+
+
+

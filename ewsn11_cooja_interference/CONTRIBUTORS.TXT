@@ -1,0 +1,8 @@
+Contact: 
+Fredrik Österlind <fros@sics.se>
+
+
+Contributors:
+Fredrik Österlind <fros@sics.se>
+
+Carlo Alberto Boano <cboano@iti.uni-luebeck.de>
