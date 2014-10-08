@@ -3,4 +3,4 @@ after that the directory structure was changed , because of which these plugins 
 Here are the working PLugins for Contiki 2.7 after making the necessary changes. 
 
 
-Make sure you change the Build.txt file path to link the Cooja.Jar file. 
+Make sure you change the Build.xml file path to link the Cooja.Jar file in Cooja_Jar Property.  
